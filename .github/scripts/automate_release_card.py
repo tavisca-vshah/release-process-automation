@@ -8,6 +8,9 @@ from requests.auth import HTTPBasicAuth
 # === Load Last Deployed SHA ===
 
 # === Find new commits ===
+
+print("triggering github action...")
+
 result = subprocess.run(
     ["git", "log", f"main..develop", "--pretty=%H"],
     capture_output=True,

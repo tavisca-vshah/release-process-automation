@@ -9,7 +9,7 @@ from requests.auth import HTTPBasicAuth
 
 # === Find new commits ===
 result = subprocess.run(
-    ["git", "log", f"master..develop", "--pretty=%H"],
+    ["git", "log", f"main..develop", "--pretty=%H"],
     capture_output=True,
     text=True,
 )

@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: develop
+      - name: Fetch master branches
+        run : git fetch origin master:master
 
       - name: Set up Python
         uses: actions/setup-python@v4
